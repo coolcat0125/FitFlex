@@ -1,0 +1,20 @@
+{
+  "name": "FitFlex · 健身动作库",
+  "short_name": "FitFlex",
+  "description": "1324 个健身动作，按肌群、器械、类型快速检索",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0A0C10",
+  "theme_color": "#0A0C10",
+  "lang": "zh-CN",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

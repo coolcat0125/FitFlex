@@ -1,0 +1,143 @@
+/* ============================================================
+   设计令牌
+   深色为默认（data-theme="dark"），浅色通过 data-theme="light"
+   或系统偏好自动切换。所有颜色只在此处定义，组件不得写死色值。
+   ============================================================ */
+
+:root {
+  /* ---- 排版 ---- */
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+  --font-num: ui-monospace, "SF Mono", "Cascadia Mono", Consolas, monospace;
+
+  --fs-xs: 11px;
+  --fs-sm: 12px;
+  --fs-base: 13px;
+  --fs-md: 15px;
+  --fs-lg: 18px;
+  --fs-xl: 22px;
+  --fs-hero: 26px;
+
+  --lh-tight: 1.25;
+  --lh-base: 1.6;
+  --lh-loose: 1.75;
+
+  --fw-normal: 400;
+  --fw-medium: 500;
+
+  /* ---- 间距（4 的倍数） ---- */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-8: 32px;
+  --sp-10: 40px;
+
+  /* ---- 圆角 ---- */
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 16px;
+  --r-xl: 22px;
+  --r-full: 999px;
+
+  /* ---- 动效 ---- */
+  --ease: cubic-bezier(0.32, 0.72, 0, 1);
+  --dur-fast: 120ms;
+  --dur-base: 200ms;
+  --dur-slow: 320ms;
+
+  /* ---- 层级 ---- */
+  --z-header: 20;
+  --z-overlay: 40;
+  --z-toast: 60;
+
+  /* ---- 安全区 ---- */
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+
+  /* ---- 布局 ---- */
+  --app-max: 560px;
+  --header-h: 56px;
+}
+
+/* ---------------------------- 深色（默认） ---------------------------- */
+:root,
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --bg: #0a0c10;
+  --bg-elev: #0e1116;
+  --surface: #14181f;
+  --surface-2: #1e2530;
+  --surface-3: #262f3c;
+
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.14);
+
+  --text: #f2f5f7;
+  --text-2: #8a94a6;
+  --text-3: #5a6478;
+
+  --accent: #c8f135;
+  --accent-ink: #0e1116;
+  --accent-soft: rgba(200, 241, 53, 0.14);
+  --accent-line: rgba(200, 241, 53, 0.32);
+
+  --coral: #ff6b4a;
+  --coral-soft: rgba(255, 107, 74, 0.14);
+  --teal: #4ecdc4;
+  --teal-soft: rgba(78, 205, 196, 0.14);
+
+  /* 人体肌群图：填充与轮廓。要在深色底上读得出形体，又不能让点缀色喧宾夺主 */
+  --body-region: #3c4a60;
+  --body-decor: #222b38;
+
+  --skeleton: linear-gradient(90deg, #171d26 25%, #1e2530 37%, #171d26 63%);
+  --scrim: rgba(6, 8, 11, 0.72);
+  --shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
+}
+
+/* ---------------------------- 浅色 ---------------------------- */
+:root[data-theme="light"] {
+  color-scheme: light;
+
+  --bg: #f4f6f8;
+  --bg-elev: #ffffff;
+  --surface: #ffffff;
+  --surface-2: #eef1f5;
+  --surface-3: #e2e7ee;
+
+  --border: rgba(15, 23, 42, 0.1);
+  --border-strong: rgba(15, 23, 42, 0.18);
+
+  --text: #0f1621;
+  --text-2: #5b6676;
+  --text-3: #94a0b0;
+
+  --accent: #b9e626;
+  --accent-ink: #16200a;
+  --accent-soft: rgba(163, 210, 20, 0.2);
+  --accent-line: rgba(140, 180, 10, 0.45);
+
+  --coral: #e04e2a;
+  --coral-soft: rgba(224, 78, 42, 0.12);
+  --teal: #0e9e95;
+  --teal-soft: rgba(14, 158, 149, 0.12);
+
+  --body-region: #c6d2e1;
+  --body-decor: #e2e8f0;
+
+  --skeleton: linear-gradient(90deg, #eef1f5 25%, #e2e7ee 37%, #eef1f5 63%);
+  --scrim: rgba(15, 23, 42, 0.42);
+  --shadow: 0 8px 28px rgba(15, 23, 42, 0.12);
+}
+
+@media (prefers-color-scheme: light) {
+  /* 深色是本产品的默认外观（品牌识别），不跟随系统自动切浅色。
+     只有用户主动点击主题按钮（写入 localStorage）才切换。 */
+  :root:not([data-theme]) {
+    color-scheme: dark;
+  }
+}
