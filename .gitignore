@@ -11,6 +11,9 @@ site/
 # 本地工作区数据（AI 记忆等）
 .workbuddy-ai/
 
+# 工作区协作锚点（描述本地多项目工作流，不属于项目本身）
+PROJECT_STATUS.md
+
 # 工具缓存
 tools/.cache/
 
