@@ -1,4 +1,5 @@
 import "./styles/tokens.css";
+import "./styles/themes.css";
 import "./styles/base.css";
 import "./styles/modules.css";
 
@@ -20,34 +21,33 @@ import { renderPlanDetail } from "./views/planDetail";
 import { renderStrength } from "./views/strength";
 import { renderMe } from "./views/me";
 import { assertTemplateIds } from "./core/plan";
+import { applyTheme, currentTheme, isDark, nextSchemeTheme, saveTheme } from "./core/theme";
+import type { ThemeKey } from "./core/theme";
 
 const root = document.getElementById("app")!;
-const THEME_KEY = "fitflex:theme";
 
-/* ------------------------------- 主题 ------------------------------- */
+/* ------------------------------- 主题皮肤 ------------------------------- */
 
-function currentTheme(): "dark" | "light" {
-  // 深色是默认外观；仅在用户显式切换过之后才读存档
-  const saved = localStorage.getItem(THEME_KEY);
-  return saved === "light" ? "light" : "dark";
-}
-
-function applyTheme(t: "dark" | "light"): void {
-  document.documentElement.setAttribute("data-theme", t);
+function setTheme(k: ThemeKey): void {
+  saveTheme(k);
+  applyTheme(k);
+  emit();
 }
 
 function toggleTheme(): void {
-  const next = currentTheme() === "dark" ? "light" : "dark";
-  localStorage.setItem(THEME_KEY, next);
-  applyTheme(next);
-  emit();
+  setTheme(nextSchemeTheme(currentTheme()));
 }
 
 applyTheme(currentTheme());
 
 /* ------------------------------- 启动 ------------------------------- */
 
-const themeCtx = { toggleTheme, theme: currentTheme };
+const themeCtx = {
+  theme: currentTheme,
+  setTheme,
+  toggleTheme,
+  isDark: () => isDark(currentTheme()),
+};
 
 function bootError(msg: string, retry: () => void): void {
   root.replaceChildren(

@@ -7,11 +7,10 @@ import { pickFeatured } from "../core/search";
 import { state, setFilters, toggleFilter, subscribe } from "../core/store";
 import { navigate } from "../router";
 import type { Exercise } from "../core/types";
+import type { ThemeCtx } from "../core/theme";
 
-export interface HomeCtx {
+export interface HomeCtx extends ThemeCtx {
   labelOf: (key: string) => string;
-  toggleTheme: () => void;
-  theme: () => "dark" | "light";
 }
 
 export function renderHome(ctx: HomeCtx): HTMLElement {
@@ -35,13 +34,22 @@ export function renderHome(ctx: HomeCtx): HTMLElement {
     state.filters.bodyPart,
     state.facets?.bodyPart ?? [],
     (part) => {
+      // 不跳转：留在首页，人体图保持可见，方便连续点几个部位对比。
+      // 想看成列表时，下方结果区有「查看全部 N 个」入口。
       setFilters({ bodyPart: part });
-      navigate({ name: "list" });
     },
   );
 
   const groupChips = el("div", { class: "chips chips--scroll" });
   const featured = el("div", { class: "cards" });
+  const featuredTitle = el("h2", { class: "section__title", text: "推荐动作" });
+  const featuredHint = el("span", { class: "section__hint", text: "" });
+  const featuredAction = el("button", {
+    class: "section__action",
+    attrs: { type: "button" },
+    text: "全部",
+    on: { click: () => navigate({ name: "list" }) },
+  });
 
   const screen = el(
     "div",
@@ -104,16 +112,8 @@ export function renderHome(ctx: HomeCtx): HTMLElement {
       el(
         "div",
         { class: "section__head" },
-        el("h2", { class: "section__title", text: "推荐动作" }),
-        el(
-          "button",
-          {
-            class: "section__action",
-            attrs: { type: "button" },
-            text: "全部",
-            on: { click: () => navigate({ name: "list" }) },
-          },
-        ),
+        el("div", { class: "section__lead" }, featuredTitle, featuredHint),
+        featuredAction,
       ),
       featured,
     ),
@@ -142,11 +142,39 @@ export function renderHome(ctx: HomeCtx): HTMLElement {
     );
   }
 
-  // 推荐
-  const picks = pickFeatured(state.list, 6);
-  for (const e of picks) featured.appendChild(cardFor(e, ctx));
+  /**
+   * 结果区：没选部位时显示推荐，选了部位就换成该肌群的动作。
+   * 与人体图同屏，选完可以直接点下一个部位继续看，不用来回跳页。
+   */
+  function paintFeatured(): void {
+    const part = state.filters.bodyPart;
+    const pool = part
+      ? state.list.filter((e) => e.bodyPart === part)
+      : pickFeatured(state.list, 6);
+    const picks = part ? pool.slice(0, 6) : pool;
 
-  const off = subscribe(() => bodyMap.update(state.filters.bodyPart));
+    featuredTitle.textContent = part ? ctx.labelOf(part) : "推荐动作";
+    featuredHint.textContent = part ? `${pool.length} 个动作` : "";
+    featuredAction.textContent = part ? `查看全部 ${pool.length} 个` : "全部";
+
+    featured.replaceChildren(...picks.map((e) => cardFor(e, ctx)));
+    if (!picks.length) {
+      featured.appendChild(
+        el(
+          "div",
+          { class: "empty empty--compact" },
+          el("p", { class: "empty__hint", text: "这个部位暂时没有动作" }),
+        ),
+      );
+    }
+  }
+
+  paintFeatured();
+
+  const off = subscribe(() => {
+    bodyMap.update(state.filters.bodyPart);
+    paintFeatured();
+  });
   screen.addEventListener("fitflex:leave", off as EventListener);
 
   return screen;
@@ -172,7 +200,7 @@ export function themeButton(ctx: HomeCtx): HTMLElement {
     on: { click: ctx.toggleTheme },
   });
   const paint = () => {
-    btn.replaceChildren(iconEl(ctx.theme() === "dark" ? "sun" : "moon"));
+    btn.replaceChildren(iconEl(ctx.isDark() ? "sun" : "moon"));
   };
   paint();
   btn.addEventListener("click", paint);

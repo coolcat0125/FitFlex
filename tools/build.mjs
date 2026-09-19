@@ -102,6 +102,8 @@ async function main() {
       "./index.html",
       "./manifest.webmanifest",
       "./icon.svg",
+      "./apple-touch-icon.png",
+      "./icon-192.png",
       rel(js),
       css ? rel(css) : null,
       "./data/index.json",

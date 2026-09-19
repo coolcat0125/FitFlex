@@ -48,9 +48,30 @@
 - **杠铃片计算器**：算出每边该挂哪些片，支持 kg（杆 20）与 lb（杆 45）双单位
 - **1RM 档案**：按动作保存历史记录，追踪涨跌
 
+### 主题皮肤
+
+5 套可切换皮肤，色值取自各家健身 App 官网**实测取色**（遍历可见元素按面积加权统计）：
+
+| 皮肤 | 底色 | 强调色 | 对标 |
+|---|---|---|---|
+| Carbon Lime | `#0a0c10` | `#c8f135` | 默认皮肤 |
+| Hevy Blue | `#0a0a0a` | `#1d83ea` | Hevy |
+| Strava Ember | `#000000` | `#fc5200` | Strava |
+| Steel Forge | `#121212` | `#35a7ff` + 金 `#fccb26` | Strong |
+| Paper Neon | `#ffffff` | `#c6ff00` | Nike Run Club |
+
+入口在「我的 → 主题皮肤」，点击即时生效并记住选择。
+
+整套颜色由 CSS 变量驱动，**组件代码不感知皮肤**——新增一套皮肤只需在
+`src/styles/themes.css` 里加一组变量，视图层一行都不用改。
+
+其中 Steel Forge 有个刻意的分工：蓝色负责交互，金色只给关键数字
+（1RM、训练记录），靠 `var(--gold, var(--accent-text))` 的 fallback 实现，
+其他皮肤没有 `--gold` 就自动回退。
+
 ### 其他
 
-- 收藏、深色/浅色主题、**离线状态指示**
+- 收藏、**离线状态指示**、首屏无主题闪烁（`index.html` 内联脚本提前定皮肤）
 
 ---
 
@@ -60,7 +81,7 @@
 |---|---|
 | 前端 | TypeScript + 原生 DOM，**零运行时依赖** |
 | 构建 | esbuild（不是 Vite，见下） |
-| 样式 | 原生 CSS + 设计令牌，深色优先 |
+| 样式 | 原生 CSS，令牌分两层：结构令牌 + 5 套主题皮肤 |
 | 数据处理 | Python 3.13（规则式译名流水线） |
 | 离线 | Service Worker，外壳 + 全量数据预缓存 |
 
@@ -144,6 +165,7 @@ src/
     plan.ts        训练计划：模板 + 持久化
     onerm.ts       1RM 公式、强度区、杠铃片计算
     offline.ts     离线缓存状态检测
+    theme.ts       主题皮肤：定义、读写、旧值迁移
     dom.ts         极简 DOM 工具
   components/    组件
     icons.ts       内联 SVG 图标
@@ -162,9 +184,10 @@ src/
     strength.ts    最大肌力
     me.ts          我的
   styles/
-    tokens.css     设计令牌（颜色/间距/字号）
+    tokens.css     结构令牌（排版 / 间距 / 圆角 / 动效）
+    themes.css     5 套主题皮肤的颜色令牌
     base.css       基础与通用组件
-    modules.css    计划 / 力量模块样式
+    modules.css    计划 / 力量 / 皮肤选择器样式
   router.ts      hash 路由
   main.ts        启动与渲染
 

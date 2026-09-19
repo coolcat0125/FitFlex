@@ -6,6 +6,7 @@ import type { SearchDoc } from "../core/search";
 import { setFilters, setSort, state, subscribe } from "../core/store";
 import { back, navigate, takeListScroll } from "../router";
 import type { Exercise, SortKey } from "../core/types";
+import type { ThemeCtx } from "../core/theme";
 
 const PAGE = 30;
 const SORT_LABEL: Record<SortKey, string> = {
@@ -15,11 +16,9 @@ const SORT_LABEL: Record<SortKey, string> = {
 };
 const SORT_ORDER: SortKey[] = ["relevance", "name", "bodyPart"];
 
-export interface ListCtx {
+export interface ListCtx extends ThemeCtx {
   docs: SearchDoc[];
   labelOf: (key: string) => string;
-  toggleTheme: () => void;
-  theme: () => "dark" | "light";
 }
 
 export function renderList(ctx: ListCtx): HTMLElement {

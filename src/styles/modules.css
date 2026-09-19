@@ -42,7 +42,7 @@
 }
 
 .tab[data-active="true"] {
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 .tab__icon {
@@ -446,7 +446,8 @@
 }
 
 .st-hero[data-conf="high"] .st-hero__value {
-  color: var(--accent);
+  /* Steel Forge 皮肤下金色专给关键数字；其他皮肤没有 --gold，回退到自己的强调色 */
+  color: var(--gold, var(--accent-text));
 }
 
 .st-hero__meta {
@@ -584,7 +585,7 @@
 }
 
 .lt__row[data-tone="strength"] .lt__weight {
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 .lt__row[data-tone="hyper"] .lt__weight {
@@ -675,7 +676,7 @@
 }
 
 .pl-sum__row--total b {
-  color: var(--accent);
+  color: var(--accent-text);
   font-size: var(--fs-lg);
 }
 
@@ -719,7 +720,7 @@
   border-radius: 4px;
   background: var(--accent-soft);
   border: 1px solid var(--accent-line);
-  color: var(--accent);
+  color: var(--accent-text);
   font-size: 10px;
   font-weight: var(--fw-medium);
   font-variant-numeric: tabular-nums;
@@ -758,7 +759,7 @@
 }
 
 .rm-item__name--link {
-  color: var(--accent);
+  color: var(--accent-text);
   display: block;
   width: 100%;
 }
@@ -778,6 +779,8 @@
   font-size: var(--fs-md);
   font-weight: var(--fw-medium);
   font-variant-numeric: tabular-nums;
+  /* 同上：Steel Forge 下用金色，其他皮肤跟随正文色 */
+  color: var(--gold, var(--text));
 }
 
 .rm-item__delta {
@@ -787,7 +790,7 @@
 }
 
 .rm-item__delta[data-sign="up"] {
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 .rm-item__delta[data-sign="down"] {
@@ -893,6 +896,79 @@
   height: 16px;
 }
 
+/* ---------------------------- 主题皮肤选择器 ---------------------------- */
+
+.skins {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--sp-2);
+}
+
+.skin {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 12px;
+  border-radius: var(--r-md);
+  background: var(--surface);
+  border: 0.5px solid var(--border);
+  text-align: left;
+  transition: border-color var(--dur-base) var(--ease), background var(--dur-base) var(--ease),
+    transform var(--dur-fast) var(--ease);
+}
+
+.skin:active {
+  transform: scale(0.98);
+}
+
+.skin[data-active="true"] {
+  border-color: var(--accent-line);
+  background: var(--accent-soft);
+}
+
+/* 色块用各皮肤自己的真实色值（内联），所以预览不随当前皮肤变化 */
+.skin__swatch {
+  display: flex;
+  gap: 3px;
+}
+
+.skin__dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: 0.5px solid var(--border-strong);
+}
+
+.skin__name {
+  font-size: var(--fs-base);
+  font-weight: var(--fw-medium);
+  letter-spacing: -0.01em;
+}
+
+.skin__tagline {
+  font-size: var(--fs-xs);
+  color: var(--text-3);
+}
+
+.skin__check {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  border-radius: var(--r-full);
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+.skin__check svg {
+  width: 12px;
+  height: 12px;
+}
+
 /* ---------------------------- 提示卡 ---------------------------- */
 
 .tip-card {
@@ -968,7 +1044,7 @@
 }
 
 .offline[data-ready="true"] .offline__title {
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 .offline__desc {
@@ -1083,7 +1159,7 @@
 }
 
 .sheet__btn--primary {
-  color: var(--accent);
+  color: var(--accent-text);
   font-weight: var(--fw-medium);
 }
 
@@ -1283,7 +1359,7 @@
 
 .edit-add:active {
   border-color: var(--accent-line);
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 /* ---------------------------- 编辑：动作搜索 ---------------------------- */

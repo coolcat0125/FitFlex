@@ -8,7 +8,7 @@
    PRECACHE 由 tools/build.mjs 在构建时注入（含 hash 后的 JS/CSS 文件名）。
 */
 
-const VERSION = "fitflex-v4";
+const VERSION = "fitflex-v6";
 const SHELL = VERSION + "-shell";
 const DATA = VERSION + "-data";
 const MEDIA = VERSION + "-media";

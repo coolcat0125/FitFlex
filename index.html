@@ -1,21 +1,39 @@
 <!doctype html>
-<html lang="zh-CN" data-theme="dark">
+<html lang="zh-CN" data-theme="carbon">
   <head>
     <meta charset="UTF-8" />
+    <script>
+      // 在样式加载前就定好皮肤，避免首屏闪一下默认配色。
+      // 这段必须内联，且要能容忍 localStorage 不可用（隐私模式）。
+      (function () {
+        try {
+          var valid = ["carbon", "hevy", "strava", "steel", "paper"];
+          var legacy = { dark: "carbon", light: "paper" };
+          var saved = localStorage.getItem("fitflex:theme");
+          var key = valid.indexOf(saved) >= 0 ? saved : legacy[saved] || "carbon";
+          document.documentElement.setAttribute("data-theme", key);
+        } catch (e) {
+          /* 读不到就用 HTML 上的默认值 */
+        }
+      })();
+    </script>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=5"
     />
     <title>FitFlex · 健身动作库</title>
     <meta name="description" content="1324 个健身动作，按肌群、器械、类型快速检索" />
-    <meta name="theme-color" content="#0A0C10" media="(prefers-color-scheme: dark)" />
-    <meta name="theme-color" content="#F4F6F8" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0A0C10" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="mobile-web-app-capable" content="yes" />
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="icon" href="./icon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="./icon.svg" />
+    <!-- iOS 不支持 SVG 格式的 apple-touch-icon，必须给 PNG，否则主屏图标会退化成网页截图 -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="167x167" href="./apple-touch-icon-167.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="./apple-touch-icon-152.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="./apple-touch-icon-120.png" />
   </head>
   <body>
     <div id="app" aria-live="polite"></div>

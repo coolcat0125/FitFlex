@@ -147,7 +147,7 @@ ul {
   width: 22px;
   height: 22px;
   flex: none;
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 .brand__name {
@@ -156,7 +156,7 @@ ul {
 
 .brand__name em {
   font-style: normal;
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 .topbar__spacer {
@@ -258,6 +258,14 @@ ul {
   margin-bottom: var(--sp-3);
 }
 
+/* 标题 + 计数并排，右侧留给操作按钮 */
+.section__lead {
+  display: flex;
+  align-items: baseline;
+  gap: var(--sp-2);
+  min-width: 0;
+}
+
 .section__title {
   margin: 0;
   font-size: var(--fs-md);
@@ -272,7 +280,7 @@ ul {
 
 .section__action {
   font-size: var(--fs-sm);
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 /* ---------------------------- 胶囊筛选 ---------------------------- */
@@ -320,7 +328,7 @@ ul {
 .chip[data-active="true"] {
   background: var(--accent-soft);
   border-color: var(--accent-line);
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 .chip__count {
@@ -330,7 +338,7 @@ ul {
 }
 
 .chip[data-active="true"] .chip__count {
-  color: var(--accent);
+  color: var(--accent-text);
   opacity: 0.7;
 }
 
@@ -432,12 +440,12 @@ ul {
 }
 
 .muscle-btn[data-active="true"] .muscle-btn__zh {
-  color: var(--accent);
+  color: var(--accent-text);
   font-weight: var(--fw-medium);
 }
 
 .muscle-btn[data-active="true"] .muscle-btn__n {
-  color: var(--accent);
+  color: var(--accent-text);
   opacity: 0.75;
 }
 
@@ -582,7 +590,7 @@ ul {
   align-items: center;
   gap: 5px;
   font-size: var(--fs-sm);
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 .sort-btn svg {
@@ -750,7 +758,7 @@ ul {
   height: 22px;
   border-radius: var(--r-full);
   background: var(--accent-soft);
-  color: var(--accent);
+  color: var(--accent-text);
   font-size: var(--fs-xs);
   font-weight: var(--fw-medium);
   display: grid;
@@ -813,7 +821,7 @@ ul {
 }
 
 .btn[data-on="true"] {
-  color: var(--accent);
+  color: var(--accent-text);
   border-color: var(--accent-line);
   background: var(--accent-soft);
 }

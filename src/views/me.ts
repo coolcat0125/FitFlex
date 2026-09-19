@@ -3,6 +3,7 @@ import { iconEl } from "../components/icons";
 import { BUILTIN_PLANS, loadMyPlans, loadProgress } from "../core/plan";
 import { getOfflineStatus } from "../core/offline";
 import type { OfflineStatus } from "../core/offline";
+import { THEMES } from "../core/theme";
 import { state } from "../core/store";
 import { navigate } from "../router";
 import type { HomeCtx } from "./home";
@@ -133,20 +134,17 @@ export function renderMe(ctx: HomeCtx): HTMLElement {
       ),
     ),
 
-    // 外观
+    // 主题皮肤
     el(
       "div",
       { class: "section" },
       el(
         "div",
-        { class: "menu" },
-        menuItem(
-          ctx.theme() === "dark" ? "moon" : "sun",
-          "外观主题",
-          ctx.theme() === "dark" ? "深色（默认）" : "浅色",
-          ctx.toggleTheme,
-        ),
+        { class: "section__head" },
+        el("h2", { class: "section__title", text: "主题皮肤" }),
+        el("span", { class: "section__hint", text: "点击即时切换" }),
       ),
+      themePicker(ctx),
     ),
 
     // 关于
@@ -206,4 +204,39 @@ function menuItem(
     ),
     el("span", { class: "menu__chev" }, iconEl("chevronRight")),
   );
+}
+
+/** 主题皮肤选择器：点一下即时生效（setTheme 会触发重渲染，选中态随之更新） */
+function themePicker(ctx: HomeCtx): HTMLElement {
+  const cur = ctx.theme();
+  const grid = el("div", { class: "skins" });
+
+  for (const t of THEMES) {
+    const active = t.key === cur;
+    grid.appendChild(
+      el(
+        "button",
+        {
+          class: "skin",
+          attrs: { type: "button", "data-active": String(active), "aria-pressed": String(active) },
+          on: {
+            click: () => {
+              if (!active) ctx.setTheme(t.key);
+            },
+          },
+        },
+        el(
+          "span",
+          { class: "skin__swatch" },
+          ...t.swatch.map((c) =>
+            el("span", { class: "skin__dot", style: { background: c } }),
+          ),
+        ),
+        el("span", { class: "skin__name", text: t.name }),
+        el("span", { class: "skin__tagline", text: t.tagline }),
+        active ? el("span", { class: "skin__check" }, iconEl("check")) : null,
+      ),
+    );
+  }
+  return grid;
 }

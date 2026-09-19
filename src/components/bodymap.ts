@@ -64,13 +64,24 @@ export interface BodyMap {
   update: (active: string | null) => void;
 }
 
+/**
+ * 某些部位只在单侧视图里可见：胸部只在正面，背部只在背面
+ * （它们在 REGIONS 里是同一块形状的两种映射）。
+ * 选中这类部位时自动翻到对应视图，否则用户点了「背部」却看不到任何高亮。
+ */
+function viewFor(part: string | null): "front" | "back" | null {
+  if (part === "back") return "back";
+  if (part === "chest") return "front";
+  return null;
+}
+
 export function createBodyMap(
   initial: string | null,
   parts: BodyPartFacet[],
   onSelect: (part: string | null) => void,
 ): BodyMap {
-  let view: "front" | "back" = "front";
   let active = initial;
+  let view: "front" | "back" = viewFor(initial) ?? "front";
 
   const figureSlot = el("div", { class: "bodymap__figure" });
   const mkSwitch = (label: string, v: "front" | "back") =>
@@ -144,6 +155,8 @@ export function createBodyMap(
     node,
     update(next) {
       active = next;
+      const v = viewFor(next);
+      if (v) view = v;
       render();
     },
   };
