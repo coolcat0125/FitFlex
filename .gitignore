@@ -24,3 +24,6 @@ Thumbs.db
 .idea/
 .vscode/
 __pycache__/
+
+# 看板隔离工作区（不应进主库）
+.worktrees/
