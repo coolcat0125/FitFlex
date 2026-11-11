@@ -1,6 +1,7 @@
 import { el, clear } from "../core/dom";
 import { loadDetail, mediaUrl } from "../core/dataset";
 import { iconEl } from "../components/icons";
+import { openJoinPlan } from "../components/joinPlan";
 import { state, toggleFavorite, isFavorite, subscribe } from "../core/store";
 import { back, saveListScroll } from "../router";
 import type { Detail } from "../core/types";
@@ -39,6 +40,17 @@ export function renderDetail(id: string): HTMLElement {
   );
   let play: () => void = () => {};
 
+  // 「加入训练计划」入口：与收藏同样的幽灵按钮位，抽屉里选计划与训练日
+  const joinBtn = el(
+    "button",
+    {
+      class: "btn btn--ghost",
+      attrs: { type: "button", "aria-label": "加入训练计划" },
+      on: { click: () => openJoinPlan(id) },
+    },
+    iconEl("clipboard"),
+  );
+
   const screen = el(
     "div",
     { class: "screen page-enter" },
@@ -75,7 +87,7 @@ export function renderDetail(id: string): HTMLElement {
     ),
     mediaSlot,
     body,
-    el("div", { class: "detail__actions" }, playBtn, favBtn),
+    el("div", { class: "detail__actions" }, playBtn, joinBtn, favBtn),
   );
 
   paintFav();

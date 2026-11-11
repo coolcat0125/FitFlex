@@ -1426,3 +1426,84 @@
   font-size: var(--fs-xs);
   color: var(--text-3);
 }
+
+/* ---------------------------- 加入训练计划（详情页入口） ---------------------------- */
+
+.join-hint {
+  margin-bottom: var(--sp-4);
+  font-size: var(--fs-sm);
+  color: var(--text-2);
+  line-height: var(--lh-loose);
+}
+
+.join-plans {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.join-plan {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 12px;
+  border-radius: var(--r-md);
+  background: var(--surface);
+  border: 0.5px solid var(--border);
+  text-align: left;
+  transition: background var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease),
+    transform var(--dur-fast) var(--ease);
+}
+
+.join-plan:active {
+  transform: scale(0.985);
+}
+
+/* 选中态与 .chip[data-active] 同一配色公式：accent-soft 底 + accent-line 边 + accent-text 字 */
+.join-plan[data-active="true"] {
+  background: var(--accent-soft);
+  border-color: var(--accent-line);
+}
+
+.join-plan__main {
+  flex: 1;
+  min-width: 0;
+}
+
+.join-plan__name {
+  font-size: var(--fs-base);
+  font-weight: var(--fw-medium);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.join-plan[data-active="true"] .join-plan__name {
+  color: var(--accent-text);
+}
+
+.join-plan__meta {
+  margin-top: 2px;
+  font-size: var(--fs-xs);
+  color: var(--text-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.join-plan[data-active="true"] .join-plan__meta {
+  color: var(--accent-text);
+  opacity: 0.75;
+}
+
+.join-plan__check {
+  flex: none;
+  width: 16px;
+  height: 16px;
+  color: var(--accent-text);
+  opacity: 0;
+  transition: opacity var(--dur-fast) var(--ease);
+}
+
+.join-plan[data-active="true"] .join-plan__check {
+  opacity: 1;
+}
