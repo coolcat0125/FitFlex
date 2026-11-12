@@ -960,6 +960,10 @@ OVERRIDE_BY_ID: dict[str, str] = {
     "0684": "器械跑步",
     "0685": "跑步",
 
+    # 0796 standing wheel rollerout：直译冗余拼接「健腹轮站姿健腹轮」→ 通行短名
+    # （2026-11-13 主控巡检顺手改，P3 译名清账轮遗留建议项；不在原 31 条清单内）
+    "0796": "站姿健腹轮",
+
     # ---- 22 组近重复条目的精确消歧 ----
     # lever bent over row / lever one arm bent over row：lever = T杠（杠铃配件），
     # 与普通 barbell 杠铃俯身划船相区分。
