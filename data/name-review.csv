@@ -1,35 +1,17 @@
 ﻿id(勿改),中文名(可修改),英文名,部位,器械,状态,说明
-0128,战绳,battling ropes,肩部,战绳,review,光秃器械名，缺动作
 0577,器械胸推（2）,lever chest press,胸部,器械,review,含序号，可能可消歧
 0656,健身球俯卧撑（2）,push-up (on stability ball),胸部,健身球,review,含序号，可能可消歧
 0727,哑铃单腿提踵（2）,single leg calf raise (on a dumbbell),小腿,哑铃,review,含序号，可能可消歧
-0857,健腹轮,wheel rollerout,腰腹,健腹轮,review,光秃器械名，缺动作
 1295,哑铃仰卧上拉（健身球）（2）,dumbbell pullover on exercise ball,胸部,哑铃,review,含序号，可能可消歧
 1307,波速球俯卧撑（2）,push up on bosu ball,胸部,波速球,review,含序号，可能可消歧
-1355,单臂靠墙,one arm against wall,背部,徒手,review,原名 4 词译名仅 4 字，可能漏译
-1369,弹力带双腿提踵（弹力带下方双腿）（第2式）,band two legs calf raise - (band under both legs) v. 2,小腿,弹力带,review,译名过长
 1371,杠铃坐姿提踵（2）,barbell seated calf raise,小腿,杠铃,review,含序号，可能可消歧
 1373,站姿提踵,bodyweight standing calf raise,小腿,徒手,review,原名 4 词译名仅 4 字，可能漏译
 1394,史密斯机反向提踵（2）,smith reverse calf raises,小腿,史密斯机,review,含序号，可能可消歧
 1459,哑铃罗马尼亚硬拉（2）,dumbbell romanian deadlift,大腿,哑铃,review,含序号，可能可消歧
 1628,曲杆蜘蛛弯举（2）,ez barbell spider curl,上臂,曲杆,review,含序号，可能可消歧
-1649,哑铃交替肱二头肌弯举（腿抬高·健身球）,dumbbell alternating bicep curl with leg raised on exercise ball,上臂,哑铃,review,译名过长
-1650,哑铃交替坐姿肱二头肌弯举（健身球）,dumbbell alternating seated bicep curl on exercise ball,上臂,哑铃,review,译名过长
-1651,哑铃肱二头肌弯举弓步（保龄球动作）,dumbbell bicep curl lunge with bowling motion,上臂,哑铃,review,译名过长
-1652,哑铃肱二头肌弯举（健身球·腿抬高）,dumbbell bicep curl on exercise ball with leg raised,上臂,哑铃,review,译名过长
-1668,哑铃单臂坐姿肱二头肌弯举（健身球）,dumbbell one arm seated bicep curl on exercise ball,上臂,哑铃,review,译名过长
-1679,哑铃坐姿单臂肱二头肌弯举（健身球·腿抬高）,dumbbell seated one arm bicep curl on exercise ball with leg raised,上臂,哑铃,review,译名过长
-1684,哑铃登台阶单腿平衡（肱二头肌弯举）,dumbbell step up single leg balance with bicep curl,上臂,哑铃,review,译名过长
-1689,推拉,push and pull bodyweight,胸部,徒手,review,原名 4 词译名仅 2 字，可能漏译
 1731,哑铃窄距推举（2）,dumbbell close grip press,上臂,哑铃,review,含序号，可能可消歧
 1766,自体反向腿弯举（2）,self assisted inverse leg curl,大腿,徒手,review,含序号，可能可消歧
-2321,哑铃站姿内侧肱二头肌弯举（第2式）,dumbbell standing inner biceps curl v. 2,上臂,哑铃,review,译名过长
-2406,绳索反握肱三头肌下压（曲杆杠·臂托）,cable reverse grip triceps pushdown (sz-bar) (with arm blaster),上臂,绳索,review,译名过长
-2801,转体抬腿,twisted leg raise (female),腰腹,徒手,review,原名 4 词译名仅 4 字，可能漏译
-3221,半程屈膝,half knee bends (male),有氧,徒手,review,原名 4 词译名仅 4 字，可能漏译
-3231,双体前屈,two toe touch (male),背部,徒手,review,原名 4 词译名仅 4 字，可能漏译
-3543,下放蹲跳,bodyweight drop jump squat,大腿,徒手,review,原名 4 词译名仅 4 字，可能漏译
-3636,高膝靠墙,high knee against wall,有氧,徒手,review,原名 4 词译名仅 4 字，可能漏译
+3221,徒手半蹲,half knee bends (male),有氧,徒手,review,原名 4 词译名仅 4 字，可能漏译
 0001,四分之三仰卧起坐,3/4 sit-up,腰腹,徒手,ok,
 0002,45°侧屈,45° side bend,腰腹,徒手,ok,
 0003,空中单车,air bike,腰腹,徒手,ok,
@@ -151,6 +133,7 @@
 0125,杠铃腕弯举（第2式）,barbell wrist curl v. 2,前臂,杠铃,ok,
 0126,杠铃腕弯举,barbell wrist curl,前臂,杠铃,ok,
 0127,杠铃泽奇深蹲,barbell zercher squat,大腿,杠铃,ok,
+0128,战绳,battling ropes,肩部,战绳,ok,
 0129,凳臂屈伸（屈膝）,bench dip (knees bent),上臂,徒手,ok,
 0130,凳髋伸展,bench hip extension,大腿,徒手,ok,
 0137,身体上,body-up,上臂,徒手,ok,
@@ -684,6 +667,7 @@
 0853,负重站姿弯举,weighted standing curl,上臂,负重,ok,
 0854,负重站姿手挤压,weighted standing hand squeeze,前臂,负重,ok,
 0856,负重斯文德推举,weighted svend press,胸部,负重,ok,
+0857,健腹轮,wheel rollerout,腰腹,健腹轮,ok,
 0858,绕环冲刺,wind sprints,腰腹,徒手,ok,
 0859,负重腕,wrist rollerer,前臂,负重,ok,
 0860,绳索后踢,cable kickback,上臂,绳索,ok,
@@ -849,6 +833,7 @@
 1352,下背弯举,lower back curl,背部,徒手,ok,
 1353,药球接过头投掷,medicine ball catch and overhead throw,背部,药球,ok,
 1354,药球过头砸球,medicine ball overhead slam,背部,药球,ok,
+1355,单臂靠墙背阔肌拉伸,one arm against wall,背部,徒手,ok,
 1356,器械单臂侧向高划船,lever one arm lateral high row,背部,器械,ok,
 1358,侧卧地面拉伸,side lying floor stretch,背部,徒手,ok,
 1359,史密斯机俯身划船,smith bent over row,背部,史密斯机,ok,
@@ -861,6 +846,7 @@
 1366,向上朝向犬式,upward facing dog,背部,徒手,ok,
 1367,宽距后引体向上,wide grip rear pull-up,背部,徒手,ok,
 1368,踝绕环,ankle circles,小腿,徒手,ok,
+1369,弹力带双腿提踵（第2式）,band two legs calf raise - (band under both legs) v. 2,小腿,弹力带,ok,
 1370,杠铃地面提踵,barbell floor calf raise,小腿,杠铃,ok,
 1372,杠铃站姿提踵,barbell standing calf raise,小腿,杠铃,ok,
 1374,跳箱下（单腿稳定）,box jump down with one leg stabilization,小腿,徒手,ok,
@@ -995,6 +981,10 @@
 1646,哑铃交替锤牧师凳弯举,dumbbell alternate hammer preacher curl,上臂,哑铃,ok,
 1647,哑铃交替牧师凳弯举,dumbbell alternate preacher curl,上臂,哑铃,ok,
 1648,哑铃交替坐姿锤式弯举,dumbbell alternate seated hammer curl,上臂,哑铃,ok,
+1649,哑铃交替弯举（脚搭健身球）,dumbbell alternating bicep curl with leg raised on exercise ball,上臂,哑铃,ok,
+1650,哑铃交替坐姿弯举（健身球）,dumbbell alternating seated bicep curl on exercise ball,上臂,哑铃,ok,
+1651,哑铃弓步弯举（保龄球动作）,dumbbell bicep curl lunge with bowling motion,上臂,哑铃,ok,
+1652,哑铃弯举（健身球·抬腿）,dumbbell bicep curl on exercise ball with leg raised,上臂,哑铃,ok,
 1653,哑铃肱二头肌弯举（鹳式站姿）,dumbbell bicep curl with stork stance,上臂,哑铃,ok,
 1654,哑铃肱二头肌弯举反向,dumbbell biceps curl reverse,上臂,哑铃,ok,
 1655,哑铃肱二头肌弯举深蹲,dumbbell biceps curl squat,上臂,哑铃,ok,
@@ -1010,6 +1000,7 @@
 1665,哑铃单臂俯卧弯举,dumbbell one arm prone curl,上臂,哑铃,ok,
 1666,哑铃单臂俯卧锤式弯举,dumbbell one arm prone hammer curl,上臂,哑铃,ok,
 1667,哑铃单臂反向蜘蛛弯举,dumbbell one arm reverse spider curl,上臂,哑铃,ok,
+1668,哑铃单臂坐姿弯举（健身球）,dumbbell one arm seated bicep curl on exercise ball,上臂,哑铃,ok,
 1669,哑铃单臂坐姿锤式弯举,dumbbell one arm seated hammer curl,上臂,哑铃,ok,
 1670,哑铃单臂站姿弯举,dumbbell one arm standing curl,上臂,哑铃,ok,
 1671,哑铃单臂站姿锤式弯举,dumbbell one arm standing hammer curl,上臂,哑铃,ok,
@@ -1020,13 +1011,16 @@
 1676,哑铃坐姿交替锤式弯举（健身球）,dumbbell seated alternate hammer curl on exercise ball,上臂,哑铃,ok,
 1677,哑铃坐姿肱二头肌弯举,dumbbell seated bicep curl,上臂,哑铃,ok,
 1678,哑铃坐姿锤式弯举,dumbbell seated hammer curl,上臂,哑铃,ok,
+1679,哑铃坐姿单臂弯举（健身球·抬腿）,dumbbell seated one arm bicep curl on exercise ball with leg raised,上臂,哑铃,ok,
 1680,哑铃站姿单臂弯举越过上斜凳,dumbbell standing one arm curl over incline bench,上臂,哑铃,ok,
 1682,曲杆杠坐姿窄距集中弯举,ez bar seated close grip concentration curl,上臂,曲杆,ok,
 1683,史密斯机肱二头肌弯举,smith machine bicep curl,上臂,史密斯机,ok,
+1684,哑铃登台阶单腿平衡（弯举）,dumbbell step up single leg balance with bicep curl,上臂,哑铃,ok,
 1685,深蹲过头伸展,squat to overhead reach,大腿,徒手,ok,
 1686,深蹲过头伸展（转体）,squat to overhead reach with twist,大腿,徒手,ok,
 1687,后侧台阶过头伸展,posterior step to overhead reach,腰腹,徒手,ok,
 1688,弓步（转体）,lunge with twist,腰腹,徒手,ok,
+1689,徒手推拉组合,push and pull bodyweight,胸部,徒手,ok,
 1700,哑铃推推举,dumbbell push press,肩部,哑铃,ok,
 1701,药球窄距俯卧撑,medicine ball close grip push up,上臂,药球,ok,
 1705,波速球深蹲,squat on bosu ball,大腿,波速球,ok,
@@ -1132,6 +1126,7 @@
 2315,器械旋转小腿,lever rotary calf,小腿,器械,ok,
 2317,哑铃坐姿屈臂侧平举,dumbbell seated bent arm lateral raise,肩部,哑铃,ok,
 2318,器械肩推（第3式）,lever shoulder press v. 3,肩部,器械,ok,
+2321,哑铃站姿内侧弯举（第2式）,dumbbell standing inner biceps curl v. 2,上臂,哑铃,ok,
 2327,哑铃反握划船,dumbbell reverse grip row (female),背部,哑铃,ok,
 2328,健身球窄俯卧撑,narrow push-up on exercise ball,上臂,健身球,ok,
 2329,脊柱转体,spine twist,腰腹,徒手,ok,
@@ -1154,6 +1149,7 @@
 2403,哑铃交替肱二头肌弯举（臂托）,dumbbell alternate biceps curl (with arm blaster),上臂,哑铃,ok,
 2404,曲杆杠肱二头肌弯举（臂托）,ez-bar biceps curl (with arm blaster),上臂,曲杆,ok,
 2405,绳索肱三头肌下压（V字杠·臂托）,cable triceps pushdown (v-bar) (with arm blaster),上臂,绳索,ok,
+2406,绳索反握三头下压（曲杆·臂托）,cable reverse grip triceps pushdown (sz-bar) (with arm blaster),上臂,绳索,ok,
 2407,杠铃肱二头肌弯举（臂托）,barbell biceps curl (with arm blaster),上臂,杠铃,ok,
 2414,杠铃站姿集中弯举,barbell standing concentration curl,上臂,杠铃,ok,
 2429,蛙式卷腹,frog crunch,腰腹,徒手,ok,
@@ -1176,7 +1172,8 @@
 2798,杠铃深蹲跳跃台阶后弓步,barbell squat jump step rear lunge,大腿,杠铃,ok,
 2799,杠铃坐姿交替抬腿,barbell sitted alternate leg raise,腰腹,杠铃,ok,
 2800,杠铃坐姿交替抬腿（女）,barbell sitted alternate leg raise (female),腰腹,杠铃,ok,
-2802,转体抬腿（女）,twisted leg raise,腰腹,徒手,ok,
+2801,转体抬腿（女）,twisted leg raise (female),腰腹,徒手,ok,
+2802,转体抬腿,twisted leg raise,腰腹,徒手,ok,
 2803,哑铃支撑深蹲,dumbbell supported squat,大腿,哑铃,ok,
 2805,哑铃单腿硬拉（踏板支撑）,dumbbell single leg deadlift with stepbox support,大腿,哑铃,ok,
 2808,哑铃相扑穿越拉,dumbbell sumo pull through,大腿,哑铃,ok,
@@ -1234,6 +1231,7 @@
 3222,半深蹲跳跃,semi squat jump (male),有氧,徒手,ok,
 3223,星式跳,star jump (male),有氧,徒手,ok,
 3224,开合跳,jack jump (male),有氧,徒手,ok,
+3231,双手摸脚尖体前屈,two toe touch (male),背部,徒手,ok,
 3234,哑铃海特飞鸟,hyght dumbbell fly,胸部,哑铃,ok,
 3235,绳索反向腿弯举,cable assisted inverse leg curl,大腿,绳索,ok,
 3236,阻力带臀推（跪姿）,resistance band hip thrusts on knees (female),大腿,阻力带,ok,
@@ -1279,6 +1277,7 @@
 3533,股四头肌,quads,大腿,徒手,ok,
 3541,哑铃上斜Y字上举,dumbbell incline y-raise,背部,哑铃,ok,
 3542,哑铃上斜T字上举,dumbbell incline t-raise,肩部,哑铃,ok,
+3543,徒手深蹲跳,bodyweight drop jump squat,大腿,徒手,ok,
 3544,上斜侧平板支撑,bodyweight incline side plank,腰腹,徒手,ok,
 3545,哑铃上斜交替推举,dumbbell incline alternate press,胸部,哑铃,ok,
 3546,哑铃坐姿交替肩,dumbbell seated alternate shoulder,肩部,哑铃,ok,
@@ -1291,6 +1290,7 @@
 3563,绳索单臂下拉,cable one arm pulldown,背部,绳索,ok,
 3582,弓步（跳跃）,lunge with jump,大腿,徒手,ok,
 3635,哑铃对侧向前弓步,dumbbell contralateral forward lunge,大腿,哑铃,ok,
+3636,靠墙高抬腿,high knee against wall,有氧,徒手,ok,
 3637,健腹轮推行,wheel run,有氧,徒手,ok,
 3638,推跑步,push to run,有氧,徒手,ok,
 3639,屈膝仰卧转体,bent knee lying twist (male),大腿,徒手,ok,

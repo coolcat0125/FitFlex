@@ -48,7 +48,9 @@ def classify(e: dict) -> tuple[str, str]:
         return "review", "单字译名，信息不足"
     if zh in SUSPICIOUS or DANGLING.match(zh):
         return "review", "只有修饰语，缺主体动作"
-    if zh in EQUIPMENT_ZH.values():
+    # LEGIT_BARE（0128 战绳 / 0857 健腹轮）已由下方硬校验认定为合法译名（通行名即器械名），
+    # 2026-11-13 起分级同步豁免，不再计入「需确认」。
+    if zh in EQUIPMENT_ZH.values() and e["id"] not in LEGIT_BARE:
         return "review", "光秃器械名，缺动作"
     if len(ORD.findall(zh)) > 1:
         return "review", "序号叠加"

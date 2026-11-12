@@ -35078,7 +35078,7 @@
  {
   "id": "1355",
   "name": "one arm against wall",
-  "nameZh": "单臂靠墙",
+  "nameZh": "单臂靠墙背阔肌拉伸",
   "bodyPart": "back",
   "equipment": "body weight",
   "target": "lats",
@@ -35627,7 +35627,7 @@
  {
   "id": "1369",
   "name": "band two legs calf raise - (band under both legs) v. 2",
-  "nameZh": "弹力带双腿提踵（弹力带下方双腿）（第2式）",
+  "nameZh": "弹力带双腿提踵（第2式）",
   "bodyPart": "lower legs",
   "equipment": "band",
   "target": "calves",
@@ -41643,7 +41643,7 @@
  {
   "id": "1649",
   "name": "dumbbell alternating bicep curl with leg raised on exercise ball",
-  "nameZh": "哑铃交替肱二头肌弯举（腿抬高·健身球）",
+  "nameZh": "哑铃交替弯举（脚搭健身球）",
   "bodyPart": "upper arms",
   "equipment": "dumbbell",
   "target": "biceps",
@@ -41684,7 +41684,7 @@
  {
   "id": "1650",
   "name": "dumbbell alternating seated bicep curl on exercise ball",
-  "nameZh": "哑铃交替坐姿肱二头肌弯举（健身球）",
+  "nameZh": "哑铃交替坐姿弯举（健身球）",
   "bodyPart": "upper arms",
   "equipment": "dumbbell",
   "target": "biceps",
@@ -41725,7 +41725,7 @@
  {
   "id": "1651",
   "name": "dumbbell bicep curl lunge with bowling motion",
-  "nameZh": "哑铃肱二头肌弯举弓步（保龄球动作）",
+  "nameZh": "哑铃弓步弯举（保龄球动作）",
   "bodyPart": "upper arms",
   "equipment": "dumbbell",
   "target": "biceps",
@@ -41770,7 +41770,7 @@
  {
   "id": "1652",
   "name": "dumbbell bicep curl on exercise ball with leg raised",
-  "nameZh": "哑铃肱二头肌弯举（健身球·腿抬高）",
+  "nameZh": "哑铃弯举（健身球·抬腿）",
   "bodyPart": "upper arms",
   "equipment": "dumbbell",
   "target": "biceps",
@@ -42426,7 +42426,7 @@
  {
   "id": "1668",
   "name": "dumbbell one arm seated bicep curl on exercise ball",
-  "nameZh": "哑铃单臂坐姿肱二头肌弯举（健身球）",
+  "nameZh": "哑铃单臂坐姿弯举（健身球）",
   "bodyPart": "upper arms",
   "equipment": "dumbbell",
   "target": "biceps",
@@ -42883,7 +42883,7 @@
  {
   "id": "1679",
   "name": "dumbbell seated one arm bicep curl on exercise ball with leg raised",
-  "nameZh": "哑铃坐姿单臂肱二头肌弯举（健身球·腿抬高）",
+  "nameZh": "哑铃坐姿单臂弯举（健身球·抬腿）",
   "bodyPart": "upper arms",
   "equipment": "dumbbell",
   "target": "biceps",
@@ -43053,7 +43053,7 @@
  {
   "id": "1684",
   "name": "dumbbell step up single leg balance with bicep curl",
-  "nameZh": "哑铃登台阶单腿平衡（肱二头肌弯举）",
+  "nameZh": "哑铃登台阶单腿平衡（弯举）",
   "bodyPart": "upper arms",
   "equipment": "dumbbell",
   "target": "biceps",
@@ -43280,7 +43280,7 @@
  {
   "id": "1689",
   "name": "push and pull bodyweight",
-  "nameZh": "推拉",
+  "nameZh": "徒手推拉组合",
   "bodyPart": "chest",
   "equipment": "body weight",
   "target": "pectorals",
@@ -47796,7 +47796,7 @@
  {
   "id": "2321",
   "name": "dumbbell standing inner biceps curl v. 2",
-  "nameZh": "哑铃站姿内侧肱二头肌弯举（第2式）",
+  "nameZh": "哑铃站姿内侧弯举（第2式）",
   "bodyPart": "upper arms",
   "equipment": "dumbbell",
   "target": "biceps",
@@ -48777,7 +48777,7 @@
  {
   "id": "2406",
   "name": "cable reverse grip triceps pushdown (sz-bar) (with arm blaster)",
-  "nameZh": "绳索反握肱三头肌下压（曲杆杠·臂托）",
+  "nameZh": "绳索反握三头下压（曲杆·臂托）",
   "bodyPart": "upper arms",
   "equipment": "cable",
   "target": "triceps",
@@ -49768,7 +49768,7 @@
  {
   "id": "2801",
   "name": "twisted leg raise (female)",
-  "nameZh": "转体抬腿",
+  "nameZh": "转体抬腿（女）",
   "bodyPart": "waist",
   "equipment": "body weight",
   "target": "abs",
@@ -49811,7 +49811,7 @@
  {
   "id": "2802",
   "name": "twisted leg raise",
-  "nameZh": "转体抬腿（女）",
+  "nameZh": "转体抬腿",
   "bodyPart": "waist",
   "equipment": "body weight",
   "target": "abs",
@@ -52162,7 +52162,7 @@
  {
   "id": "3221",
   "name": "half knee bends (male)",
-  "nameZh": "半程屈膝",
+  "nameZh": "徒手半蹲",
   "bodyPart": "cardio",
   "equipment": "body weight",
   "target": "cardiovascular system",
@@ -52330,7 +52330,7 @@
  {
   "id": "3231",
   "name": "two toe touch (male)",
-  "nameZh": "双体前屈",
+  "nameZh": "双手摸脚尖体前屈",
   "bodyPart": "back",
   "equipment": "body weight",
   "target": "spine",
@@ -54318,7 +54318,7 @@
  {
   "id": "3543",
   "name": "bodyweight drop jump squat",
-  "nameZh": "下放蹲跳",
+  "nameZh": "徒手深蹲跳",
   "bodyPart": "upper legs",
   "equipment": "body weight",
   "target": "glutes",
@@ -54887,7 +54887,7 @@
  {
   "id": "3636",
   "name": "high knee against wall",
-  "nameZh": "高膝靠墙",
+  "nameZh": "靠墙高抬腿",
   "bodyPart": "cardio",
   "equipment": "body weight",
   "target": "cardiovascular system",
